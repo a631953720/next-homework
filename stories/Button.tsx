@@ -22,6 +22,14 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * label 種類，看是要甚麼字體
+   */
+  labelType?: 'Normal'| 'Bold'| 'Italic';
+  /**
+   * 隨意測試用，無實際作用
+   */
+  test?: string;
 }
 
 /**
@@ -32,6 +40,7 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  // labelType,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
